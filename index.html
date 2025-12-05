@@ -1,1 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Autobiography | Wilfredo Ferenal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Fonts and Base Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #02e0f9;
+            line-height: 1.7;
+            /* Smooth background color transition */
+            transition: background-color 0.5s ease-in-out; 
+        }
 
+        .section-header {
+            border-left: 5px solid pink; 
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+        }
+
+        /* 1. CSS Transitions for Hover Effects (e.g., on Header) */
+        .hover-lift {
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* slightly bigger shadow */
+        }
+        
+        /* 2. CSS for Scroll-to-Reveal (Fade-in effect) */
+        .scroll-reveal-section {
+            opacity: 0; /* Starts invisible */
+            transform: translateY(20px); /* Starts slightly below its final position */
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+        }
+
+        .scroll-reveal-section.visible {
+            opacity: 1; /* Fully visible */
+            transform: translateY(0); /* Final position */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-8 lg:p-12">
+
+        <header class="bg-white shadow-xl rounded-2xl p-6 mb-8 flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8 hover-lift">
+            
+            <div class="flex-shrink-0">
+                <img 
+                    src="main.jpg" 
+                    alt="Profile Photo of Wilfredo Ferenal"
+                    class="w-40 h-40 object-cover rounded-full border-4 border-blue-500 shadow-md"
+                    onerror="this.onerror=null;this.src='https://placehold.co/160x160/ef4444/ffffff?text=ERROR'"
+                >
+            </div>
+
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
+                    Wilfredo Ferenal
+                </h1>
+                <p class="text-xl text-blue-600 mt-2 font-medium">
+                    Bachelor of Science in Computer Applications (Embedded System)
+                </p>
+            </div>
+        </header>
+
+        <main class="space-y-10">
+
+            <section class="bg-white shadow-lg rounded-2xl p-6 scroll-reveal-section">
+                <h2 class="section-header text-2xl font-bold text-gray-900">
+                    Short Introduction About Myself
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Hello! I'm Wilfredo Ferenal, and I'm a passionate computer applications student. I'm an introverted person, but when you are getting close to me, I'm so naughty guy. I'm not smart one but I can do my best to be a better one.
+                </p>
+            </section>
+
+            <section class="bg-white shadow-lg rounded-2xl p-6 scroll-reveal-section">
+                <h2 class="section-header text-2xl font-bold text-gray-900">
+                    Early Life
+                </h2>
+                <p class="text-gray-600">
+                    I was born and raised in Iligan city, Philippines, in a highly religious Christian family. My upbringing, rooted in principles of service and humility, directly shaped my core values and have faith in GOD.
+                </p>
+            </section>
+
+            <section class="bg-white shadow-lg rounded-2xl p-6 scroll-reveal-section">
+                <h2 class="section-header text-2xl font-bold text-gray-900">
+                    Education
+                </h2>
+                <ul class="space-y-4 text-gray-600">
+                    <li class="border-b pb-2">
+                        <span class="font-semibold text-blue-600">Bachelor of Science in Computer Application Major in Embedded System</span>, Mindanao State University - Iligan Institute of technology (Currently studied)
+                        <br>
+                        <span class="text-sm italic">Key courses: Computer System, Web and Mobile Development (HTML/CSS/JS), Data Management.</span>
+                    </li>
+                    <li class="border-b pb-2">
+                        <span class="font-semibold text-blue-600">High School Diploma</span>, Iligan City National High School (Graduated: 2025)
+                        <br>
+                        <span class="text-sm italic">Achieved: With Honors.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="bg-white shadow-lg rounded-2xl p-6 scroll-reveal-section">
+                <h2 class="section-header text-2xl font-bold text-gray-900">
+                    Hobbies and Interests
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-600">
+                    <div class="flex items-center space-x-3">
+                        <span class="text-blue-500 font-bold text-xl">🩰</span>
+                        <span>Contemporary dance or ballet dance</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="text-blue-500 font-bold text-xl">📚</span>
+                        <span>Reading Thrill/Horror Fiction and Fantasy novels</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="text-blue-500 font-bold text-xl">🖥️</span>
+                        <span>Watching Asian series</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="text-blue-500 font-bold text-xl">🎧</span>
+                        <span>Listening Kpop music</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white shadow-lg rounded-2xl p-6 scroll-reveal-section">
+                <h2 class="section-header text-2xl font-bold text-gray-900">
+                    Goals in Life
+                </h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-600 pl-4">
+                    <li>Achieve and maintain a cumulative GPA of 2.50 or higher.</li>
+                    <li>To complete travel to at least three new continents.</li>
+                    <li>Complete at least one major, career-relevant certification or course.</li>
+                    <li>To continue learning and eventually mentor others entering the tech industry.</li>
+                </ul>
+            </section>
+
+            <section class="bg-white shadow-lg rounded-2xl p-6 scroll-reveal-section">
+                <h2 class="section-header text-2xl font-bold text-gray-900">
+                    A Favorite Quote
+                </h2>
+                <blockquote class="border-l-4 border-pink-500 pl-4 py-2 italic text-gray-700 bg-pink-50 rounded-lg p-4">
+                    "It does not matter how slowly you go, as long as you do not stop."
+                    <footer class="mt-2 text-sm font-semibold text-gray-600">— Confucius</footer>
+                </blockquote>
+            </section>
+
+        </main>
+
+        <footer class="mt-12 text-center text-gray-500 text-sm border-t pt-4">
+            <p>&copy; 2025 Wilfredo B. Ferenal. All rights reserved. built in HMTL and CSS with Javascript </p>
+        </footer>
+
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll('.scroll-reveal-section');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const body = document.body;
+
+            
+            if (scrollY > 500) {
+                body.style.backgroundColor = '#f0f9ff';
+            } else {
+                body.style.backgroundColor = '#02e0f9'; 
+            }
+        });
+    </script>
+</body>
+</html>
